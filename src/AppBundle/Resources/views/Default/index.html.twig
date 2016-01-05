@@ -1,0 +1,14 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block contenido %}
+
+    {% block nav %}
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {% include 'AppBundle:Comunes:navConLog.html.twig' %}
+        {% else %}
+            {% include 'AppBundle:Comunes:navSinLog.html.twig' %}
+        {% endif %}
+    {% endblock %}
+
+{% endblock %}
+
